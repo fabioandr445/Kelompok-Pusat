@@ -1,0 +1,26 @@
+/********** Template CSS **********/
+:root {
+    --primary: #0463FA;
+    --light: #EFF5FF;
+    --dark: #1B2C51;
+}
+
+.fw-medium {
+    font-weight: 500 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-black {
+    font-weight: 900 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
