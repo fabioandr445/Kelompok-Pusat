@@ -1,75 +1,204 @@
-/* General Styles */
+/* Reset default browser styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Ganti dengan font yang kamu inginkan */
-    background-color: #f8f9fa; /* Warna latar belakang */
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Font modern (pastikan di-load di HTML) */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff8f8; /* Latar belakang pink muda */
 }
 
-/* Navbar Styles */
+/* Navbar */
 .navbar {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff !important;
 }
 
-.navbar .navbar-brand {
-    font-weight: bold;
-    color: #333;
+.navbar-brand h1 {
+    font-size: 1.7rem;
+    color: #e91e63; /* Pink untuk logo */
 }
 
-.navbar .nav-link {
-    color: #6c757d;
-    transition: color 0.3s ease-in-out;
+.navbar-nav .nav-link {
+    margin: 0 15px;
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s ease;
 }
 
-.navbar .nav-link:hover {
-    color: #007bff;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ff4081; /* Pink lebih terang untuk hover */
 }
 
-/* Produk Styles */
-.product-item {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: box-shadow 0.3s;
-}
-
-.product-item:hover {
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.product-img {
-    height: 200px;
-    object-fit: cover;
-}
-
-.product-info {
-    padding: 20px;
-}
-
-.product-title {
-    font-weight: bold;
-    color: #333;
-}
-
-.product-price {
-    color: #007bff;
-}
-
-/* Button Styles */
 .btn-primary {
-    background-color: #007bff;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
+    background-color: #ff4081;
+    border-color: #ff4081;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #0069d9;
+    background-color: #e91e63;
+    border-color: #e91e63;
 }
 
-/* Responsivitas */
+/* Header */
+.header {
+    padding: 6rem 0;
+    background-color: #ffe6f2; /* Pink muda untuk header */
+    color: #e91e63; /* Teks pink tua di header */
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .row {
+    align-items: center;
+}
+
+.header .col-sm-4 {
+    border: 1px solid #e91e63; /* Border pink untuk counter */
+    padding: 10px;
+    margin-bottom: 20px; /* Spasi bawah antar counter */
+}
+
+.header-carousel .owl-carousel-item img {
+    max-height: 500px; /* Tinggi maksimum gambar */
+    width: 100%; /* Lebar gambar responsif */
+    object-fit: cover;
+    filter: brightness(0.9);
+    display: block; /* Mencegah spasi kosong di bawah gambar */
+    margin: 0 auto; /* Memusatkan gambar */
+}
+.header-carousel .owl-carousel-item{
+    height: 500px;
+}
+
+/* About */
+.about {
+    padding: 4rem 0;
+}
+
+.about .img-fluid {
+    max-width: 100%; /* Lebar gambar responsif */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Margin atas bawah dan memusatkan gambar */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about .img-fluid:hover {
+    transform: scale(1.05);
+}
+
+.about p.d-inline-block {
+    background-color: #ff4081;
+    color: white;
+}
+
+/* Service */
+.service-item {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 2rem;
+    color: #ff4081;
+}
+
+/* Team */
+.team-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.team-item:hover img {
+    transform: scale(1.05);
+}
+
+.team-social .btn-square {
+    width: 38px;
+    height: 38px;
+    margin: 0 4px;
+    background-color: white;
+    color: #e91e63;
+    border: 1px solid #e91e63;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.team-social .btn-square:hover {
+    background-color: #e91e63;
+    color: white;
+}
+
+/* Feature */
+.feature {
+    background-color: #ff4081;
+    padding: 4rem 0;
+}
+
+.feature-text {
+    color: white;
+}
+
+.feature-text p.d-inline-block {
+    background-color: white;
+    color: #ff4081;
+}
+
+/* Testimonial */
+.testimonial-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 3px solid #ff4081; /* Border pink pada gambar testimonial */
+}
+
+/* Footer */
+.footer {
+    padding: 5rem 0;
+    background-color: #222;
+}
+
+.footer .btn-social {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    background-color: #333;
+    border-color: #555;
+    transition: background-color 0.3s ease;
+}
+
+.footer .btn-social:hover {
+    background-color: #555;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .col-lg-3 {
-        width: 100%;
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-carousel .owl-carousel-item img {
+        max-height: 300px;
+    }
+    .header-carousel .owl-carousel-item{
+        height: 300px;
     }
 }
